@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTAWESOME CDN LINK  -->
+    <script src="https://kit.fontawesome.com/a768343406.js" crossorigin="anonymous"></script>
+
+    <!-- linking the cs  -->
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="landing-page">
+        <div class="time-and-location">
+            <h1 class="time"><span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+                <span id="half">AM/PM</span>
+            </h1>
+            <p class="date"><span id="date">0</span> <span id="month">Month</span> <span id="year">Year</span>, <span
+                    id="day">Thursday</span></p>
+            <div class="location">
+                <h4><span id="city">Your</span>, <span id="state">Location</span> <span id="temp"></span> &#8451; <span
+                        id="sunmoon"></span>
+            </div>
+            </h4>
+        </div>
+        <div class="arrow-button">
+            <p>Scroll down to <br> get started!</p>
+            <div class="arrow-button-wrapper">
+                <i class="fa-solid fa-arrow-down arrow-button-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-page">
+        <div class="other-details">
+            <h4 class="title-text"><i class="fa-solid fa-sun"></i> What's Going on?</h4>
+            <div class="weather-cards">
+                <div class="weather-card">
+                    <i class="fa-solid fa-snowman card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Feels like</h5>
+                        <h1 class="card-information"><span id="feels_like"></span> &#8451;</h1>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <i class="fa-solid fa-droplet card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Humidity</h5>
+                        <h1 class="card-information"><span id="humidity"></span> gm<sup>3</sup></h1>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <i class="fa-solid fa-temperature-arrow-up card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Minimum temp.</h5>
+                        <h1 class="card-information"><span id="min_temp"></span> &#8451;</h1>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <i class="fa-solid fa-temperature-arrow-up card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Maximum temp.</h5>
+                        <h1 class="card-information"><span id="max_temp"></span> &#8451;</h1>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <i class="fa-solid fa-wind card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Wind Speed</h5>
+                        <h1 class="card-information"><span id="wind_speed"></span>m/s</h1>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <i class="fa-regular fa-snowflake card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Wind Temprature</h5>
+                        <h1 class="card-information"><span id="wind_degrees"></span> &#8451;</h1>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <i class="fa-solid fa-sun card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Sunrise Time</h5>
+                        <h1 class="card-information"><span id="sunrise"></span></h1>
+                    </div>
+                </div>
+                <div class="weather-card">
+                    <i class="fa-solid fa-moon card-icon"></i>
+                    <div>
+                        <h5 class="card-text">Sunset Time</h5>
+                        <h1 class="card-information"><span id="sunset"></span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <h4 class="title-text"><i class="fa-solid fa-earth-americas"></i> Around the world!</h4>
+            <div class="news-cards">
+                <div class="news-card"></div>
+                <div class="news-card"></div>
+                <div class="news-card"></div>
+                <div class="news-card"></div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

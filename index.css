@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Raleway:wght@200;300;400&family=Roboto+Mono&family=Roboto:wght@300&family=Source+Code+Pro:wght@500&family=Source+Sans+Pro:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(bg.jpg);
+  background-attachment: fixed;
+  backdrop-filter: brightness(50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+.landing-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.time-and-location {
+  color: white;
+  font-size: 3rem;
+  width: fit-content;
+  height: fit-content;
+  margin: 4rem;
+}
+.time {
+  margin: 0;
+  display: inline;
+}
+.date {
+  margin: 0;
+}
+.location {
+  margin: 0;
+}
+.arrow-button {
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  font-size: 2rem;
+  margin: 4rem;
+}
+.arrow-button-wrapper {
+  padding: 1rem;
+  border: 2px solid white;
+  border-radius: 50px;
+  width: fit-content;
+  float: right;
+  backdrop-filter: blur(5px);
+}
+.arrow-button-icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.home-page {
+  margin: 0;
+}
+.home-page {
+  padding: 1rem 4rem;
+}
+.weather-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.weather-card {
+  backdrop-filter: blur(10px) brightness(50%);
+  color: white;
+  border: 2px solid grey;
+  aspect-ratio: 1/1;
+  width: 12rem;
+  border-radius: 10px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.weather-card div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.card-icon {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+.title-text {
+  font-size: 3rem;
+  color: white;
+}
+.card-text {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+.news-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.news-card {
+  aspect-ratio: 3/7;
+  width: calc(100% / 5);
+  border-radius: 10px;
+}
+.news-card:nth-child(1) {
+  background: url(https://images.pexels.com/photos/6868411/pexels-photo-6868411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: brightness(50%);
+}
+.news-card:nth-child(2) {
+  background: url(https://images.pexels.com/photos/1464223/pexels-photo-1464223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: brightness(50%);
+}
+.news-card:nth-child(3) {
+  background: url(https://images.pexels.com/photos/320617/pexels-photo-320617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: brightness(50%);
+}
+.news-card:nth-child(4) {
+  background: url(https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: brightness(50%);
+}
+
+/* SOME MEDIA QUERIES  */
+
+@media (orientation: portrait) {
+  .time-and-location {
+    margin: 3rem 1rem;
+    font-size: 1rem;
+  }
+  .arrow-button {
+    margin: 3rem 1rem;
+    font-size: 1rem;
+  }
+  .home-page {
+    padding: 1rem;
+  }
+  .title-text {
+    font-size: 1rem;
+  }
+  .weather-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: inherit;
+    gap: 5px;
+    padding: 0;
+  }
+  .weather-card div {
+    text-align: center;
+  }
+  .weather-card {
+    width: calc(100% / 2.5);
+    flex-direction: row;
+    aspect-ratio: 9/3;
+    padding: 0.3rem;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  .card-information {
+    font-size: 1rem;
+  }
+  .card-icon {
+    font-size: 3rem;
+  }
+}
