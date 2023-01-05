@@ -144,11 +144,11 @@ body {
 
 @media (orientation: portrait) {
   .time-and-location {
-    margin: 3rem 1rem;
+    margin: 5rem 1rem;
     font-size: 1rem;
   }
   .arrow-button {
-    margin: 3rem 1rem;
+    margin: 5rem 1rem;
     font-size: 1rem;
   }
   .home-page {
