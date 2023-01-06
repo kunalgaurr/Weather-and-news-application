@@ -5,7 +5,6 @@ body {
   padding: 0;
   background: url(bg.jpg);
   background-attachment: fixed;
-  backdrop-filter: brightness(50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,8 +12,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .landing-page {
-  height: 100vh;
-  width: 100%;
+  backdrop-filter: blur(10px) brightness(50%);
+  margin: 2rem;
+  border-radius: 10px;
+  border: 1px solid grey;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -66,21 +67,22 @@ body {
 .weather-cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  gap: 1rem;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .weather-card {
-  backdrop-filter: blur(10px) brightness(50%);
   color: white;
-  border: 2px solid grey;
-  aspect-ratio: 1/1;
+  border: 1px solid grey;
+  aspect-ratio: 10/4;
   width: 12rem;
-  border-radius: 10px;
+  border-radius: 60px;
   display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  backdrop-filter: blur(10px) brightness(50%);
+  padding: 0 3rem;
 }
 .weather-card div {
   display: flex;
@@ -89,7 +91,7 @@ body {
   text-align: center;
 }
 .card-icon {
-  font-size: 4rem;
+  font-size: 2rem;
   margin-top: 1rem;
 }
 .title-text {
@@ -97,69 +99,124 @@ body {
   color: white;
 }
 .card-text {
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
-  margin: 1rem;
+  margin: 0rem;
+}
+.card-information {
+  font-size: 1rem;
+}
+.wind-purity {
+  /* gap: 1rem; */
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.gas-type {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  border: 1px solid grey;
+  aspect-ratio: 10/4;
+  width: fit-content;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  backdrop-filter: blur(10px) brightness(50%);
+  padding: 0 3.1rem;
+}
+.gas-name {
+  margin: 0 1rem 0 0;
+}
+.concentration {
+  font-size: 1rem;
+}
+.news-section {
+  backdrop-filter: blur(10px) brightness(50%);
+  padding: 1rem;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
 .news-cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  gap: 1rem;
 }
 .news-card {
-  aspect-ratio: 3/7;
-  width: calc(100% / 5);
+  width: calc(100% / 2.5);
+  aspect-ratio: 4/2;
+  border-radius: inherit;
+  backdrop-filter: brightness(50%);
+  padding: 2rem;
+  color: white;
+}
+.news-link {
+  background-color: white;
+  padding: 1rem;
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
   border-radius: 10px;
 }
 .news-card:nth-child(1) {
-  background: url(https://images.pexels.com/photos/6868411/pexels-photo-6868411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background: url(https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=600);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: brightness(50%);
+  background-size: cover;
 }
 .news-card:nth-child(2) {
-  background: url(https://images.pexels.com/photos/1464223/pexels-photo-1464223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background: url(https://images.pexels.com/photos/3806756/pexels-photo-3806756.jpeg?auto=compress&cs=tinysrgb&w=600);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: brightness(50%);
+  background-size: cover;
 }
 .news-card:nth-child(3) {
-  background: url(https://images.pexels.com/photos/320617/pexels-photo-320617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background: url(https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: brightness(50%);
+  background-size: cover;
 }
 .news-card:nth-child(4) {
-  background: url(https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background: url(https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=600);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: brightness(50%);
+  background-size: cover;
 }
 
 /* SOME MEDIA QUERIES  */
 
 @media (orientation: portrait) {
+  .landing-page {
+    margin: 1rem;
+    padding: 1rem;
+    height: fit-content;
+  }
   .time-and-location {
-    margin: 5rem 1rem;
+    /* margin: 5rem 1rem; */
+    margin: 2rem;
     font-size: 1rem;
   }
   .arrow-button {
-    margin: 5rem 1rem;
-    font-size: 1rem;
+    display: none;
   }
   .home-page {
     padding: 1rem;
   }
   .title-text {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .weather-cards {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
     width: inherit;
     gap: 5px;
     padding: 0;
@@ -171,7 +228,7 @@ body {
     width: calc(100% / 2.5);
     flex-direction: row;
     aspect-ratio: 9/3;
-    padding: 0.3rem;
+    padding: 0.5rem;
   }
   .card-text {
     font-size: 1rem;
@@ -180,6 +237,20 @@ body {
     font-size: 1rem;
   }
   .card-icon {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .news-section {
+    padding: 10px;
+  }
+  .news-card {
+    /* aspect-ratio: 1/1; */
+  }
+  .news-text {
+    font-size: 1rem;
+  }
+  .news-link {
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 1rem;
   }
 }

@@ -109,29 +109,63 @@ if (window.navigator.geolocation) {
         )
           .then((response) => response.json())
           .then((response) => {
-            console.log(response);
-
             temp.innerHTML = response.temp;
             feels_like.innerHTML = response.feels_like;
             humidity.innerHTML = response.humidity;
             min_temp.innerHTML = response.min_temp;
             max_temp.innerHTML = response.max_temp;
             wind_speed.innerHTML = response.wind_speed;
-            wind_degrees.innerHTML = response.wind_degrees;
-            sunrise.innerHTML = response.sunrise;
-            sunset.innerHTML = response.sunset;
 
             const date = new Date();
 
-            if (date.getHours() >= 6 && date.getHours <= 18) {
+            if (date.getHours() >= 6 && date.getHours() <= 18) {
               document.getElementById('sunmoon').innerHTML = '☀️';
             } else {
               document.getElementById('sunmoon').innerHTML = '🌙';
             }
 
-            console.log(response.sunset);
+            // console.log(response);
           })
 
+          .catch((err) => console.error(err));
+
+        const option = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key':
+              'e0f2b7102amshaa1596575ea8f03p17ea7fjsnf3f5f9109382',
+            'X-RapidAPI-Host': 'air-quality-by-api-ninjas.p.rapidapi.com',
+          },
+        };
+
+        fetch(
+          'https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=' +
+            userLocation,
+          option
+        )
+          .then((response) => response.json())
+          .then((response) => {
+            // console.log(response.NO2);
+
+            document.getElementById('CO').innerHTML = response.CO.concentration;
+            document.getElementById('NO2').innerHTML =
+              response.NO2.concentration;
+            document.getElementById('O3').innerHTML = response.O3.concentration;
+            document.getElementById('SO2').innerHTML =
+              response.SO2.concentration;
+            document.getElementById('PM10').innerHTML =
+              response.PM10.concentration;
+
+            document.getElementById('COaqi').innerHTML = response.CO.aqi;
+            document.getElementById('NO2aqi').innerHTML = response.NO2.aqi;
+            document.getElementById('O3aqi').innerHTML = response.O3.aqi;
+            document.getElementById('SO2aqi').innerHTML = response.SO2.aqi;
+            document.getElementById('PM10aqi').innerHTML = response.PM10.aqi;
+            document.getElementById('overall_aqi').innerHTML =
+              response.overall_aqi;
+
+            console.log(response);
+          })
           .catch((err) => console.error(err));
       })
       .catch((err) => console.error(err));
