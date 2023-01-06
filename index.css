@@ -191,6 +191,12 @@ body {
   background-size: cover;
 }
 
+footer {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
 /* SOME MEDIA QUERIES  */
 
 @media (orientation: portrait) {

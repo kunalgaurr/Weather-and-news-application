@@ -2,11 +2,7 @@
 const date = new Date();
 
 // GETTING HOURS
-document.getElementById('hour').innerHTML = date.getHours();
-
-if (date.getHours() < 10) {
-  document.getElementById('hour').innerHTML = '0' + date.getHours();
-}
+document.getElementById('hour').innerHTML = '0' + date.getHours();
 
 if (date.getHours() > 12) {
   document.getElementById('hour').innerHTML =
