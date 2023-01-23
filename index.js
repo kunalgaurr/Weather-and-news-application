@@ -56,16 +56,16 @@ document.getElementById('year').innerHTML = date.getFullYear();
 
 // GETTING WEEKDAY
 const weekday = [
+  'Sunday',
   'Monday',
   'Tuesday',
   'Wednesday',
   'Thusrday',
   'Friday',
   'Saturday',
-  'Sunday',
 ];
 
-document.getElementById('day').innerHTML = weekday[date.getDay() - 1];
+document.getElementById('day').innerHTML = weekday[date.getDay()];
 
 // FETCHING THE GEOLOCATION WEB API
 if (window.navigator.geolocation) {
@@ -113,14 +113,19 @@ if (window.navigator.geolocation) {
             wind_speed.innerHTML = response.wind_speed;
 
             const date = new Date();
+            // const body = document.getElementsByTagName('body');xx
 
             if (date.getHours() >= 6 && date.getHours() <= 18) {
               document.getElementById('sunmoon').innerHTML = '☀️';
+              document.body.style.backgroundImage =
+                'url(https://images.pexels.com/photos/296234/pexels-photo-296234.jpeg?auto=compress&cs=tinysrgb&w=600)';
             } else {
               document.getElementById('sunmoon').innerHTML = '🌙';
+              document.body.style.backgroundIamge =
+                'url(https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=600)';
             }
 
-            // console.log(response);
+            console.log(response);
           })
 
           .catch((err) => console.error(err));
